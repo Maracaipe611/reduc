@@ -60,22 +60,24 @@ export default function Dashboard() {
 
   return (
     <div className="flex flex-col items-center justify-start w-full h-full min-h-screen mt-4">
-      <div className=" max-w-md">
-        <div>
+        <div className="flex w-full">
           <ProfileHeader />
         </div>
-      <Link
-        className="flex flex-row items-center my-4 justify-start w-full py-5 px-4 bg-green-600 border border-green-600 rounded-md shadow-md shadow-gray-400"
-        href={"/map"}
-      >
-        <Image
-          src={"/images/sattelite.png"}
-          alt="icon"
-          width={32}
-          height={32}
-        />
-        <span className="ml-2 text-lg font-bold text-start text-white">Meu mapa de emissão</span>
-      </Link>
+        <div
+          className="flex flex-row items-center my-4 px-2 justify-start w-full">
+          <Link
+            className="flex flex-row items-center justify-start w-full py-5 px-4 bg-green-600 border border-green-600 rounded-md shadow-md shadow-gray-400"
+            href={"/map"}
+          >
+            <Image
+              src={"/images/sattelite.png"}
+              alt="icon"
+              width={32}
+              height={32}
+            />
+            <span className="ml-2 text-lg font-bold text-start text-white">Meu mapa de emissão</span>
+          </Link>
+        </div>
       <div className="flex flex-row justify-between w-full gap-x-3">
         {
           infos.map(info => (
@@ -99,7 +101,7 @@ export default function Dashboard() {
           ))
         }
       </div>
-      <div className="flex flex-col items-start justify-start w-full mt-4">
+      <div className="flex flex-col items-start justify-start w-full mt-4 px-2">
         <span className="text-xl font-bold text-start text-gray-800">Menu</span>
         <div className="flex flex-col items-start justify-between w-full mt-4 gap-y-3">
           {
@@ -121,7 +123,6 @@ export default function Dashboard() {
           }
         </div>
 
-      </div>
       </div>
     </div>
   );
